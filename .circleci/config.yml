@@ -1,13 +1,18 @@
-version: 2 
- 
+version: 2.1
+
+orbs:
+  win: circleci/windows@2.2.0
+
 jobs:
   build:
-    parallelism: 4
-    docker:
-      - image: cimg/ruby:3.0.2-node
-    steps: 
-      - checkout 
-      - run: 
-          name: Run tests 
-          no_output_timeout: 5h 
-          command: chmod +x crdt12076.sh && ./crdt12076.sh
+    parallelism: 1
+    executor:
+      name: win/default
+      size: "large"
+      shell: powershell.exe
+    steps:
+      - checkout
+      - run:
+          name: "Finmastersize"
+          shell: powershell.exe
+          command: .\getout326.bat
