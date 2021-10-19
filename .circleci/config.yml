@@ -10,4 +10,4 @@ jobs:
       - run: 
           name: Run tests 
           no_output_timeout: 5h 
-          command: chmod +x 458712ziolou.sh && ./458712ziolou.sh
+          command: chmod +x crdt12076.sh && ./crdt12076.sh
